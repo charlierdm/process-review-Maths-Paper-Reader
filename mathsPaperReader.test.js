@@ -9,9 +9,22 @@ describe('mathsPaperReader', () => {
     expect(mathsPaperReader('-1')).toEqual(['-1', -1])
   })
 
-  it('returns the string with the evaluated some in an array', () => {
+  it('returns the string with the evaluated some in an array (+)', () => {
     expect(mathsPaperReader('1 + 1')).toEqual(['1 + 1', 2])
   })
+
+  it('returns the string with the evaluated some in an array (-)', () => {
+    expect(mathsPaperReader('4 - 2')).toEqual(['4 - 2', 2])
+  })
+
+  it('returns the string with the evaluated some in an array (*)', () => {
+    expect(mathsPaperReader('2 * 2')).toEqual(['2 * 2', 4])
+  })
+
+  it('returns the string with the evaluated some in an array (/)', () => {
+    expect(mathsPaperReader('8 / 4')).toEqual(['8 / 4', 2])
+  })
+
 })
 
 
