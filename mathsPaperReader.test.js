@@ -25,6 +25,12 @@ describe('mathsPaperReader', () => {
     expect(mathsPaperReader('8 / 4')).toEqual(['8 / 4', 2])
   })
 
+  it('throws an error when given anything other than a string', () => {
+    expect(() => {
+      mathsPaperReader(1)
+    }).toThrow("Input must be a string.")
+  })
+
 })
 
 
