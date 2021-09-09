@@ -1,8 +1,16 @@
 const mathsPaperReader = require('./mathsPaperReader')
 
 describe('mathsPaperReader', () => {
-  it('returns a single value', () => {
-    expect(mathsPaperReader(1)).toEqual(1)
+  it('returns a single positive value', () => {
+    expect(mathsPaperReader('1')).toEqual(['1', 1])
+  })
+
+  it('returns a single negative value', () => {
+    expect(mathsPaperReader('-1')).toEqual(['-1', -1])
+  })
+
+  it('returns the string with the evaluated some in an array', () => {
+    expect(mathsPaperReader('1 + 1')).toEqual(['1 + 1', 2])
   })
 })
 
