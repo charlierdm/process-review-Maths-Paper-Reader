@@ -1,0 +1,22 @@
+{
+  "name": "process-review-09-09-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "review.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlierdm/process-review-09-09-2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlierdm/process-review-09-09-2021/issues"
+  },
+  "homepage": "https://github.com/charlierdm/process-review-09-09-2021#readme",
+  "dependencies": {
+    "jest": "^27.1.1"
+  }
+}
