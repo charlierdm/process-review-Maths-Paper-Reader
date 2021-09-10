@@ -1,35 +1,25 @@
 const mathsPaperReader = (string) => {
   if (typeof string != "string") throw new Error("Input must be a string.");
 
+  const extractSum = (operator) => string.split(operator).map(Number);
+
   if (string.includes("+")) {
-    let add = string
-      .split("+")
-      .map(Number)
-      .reduce((acc, cv) => acc + cv);
+    let add = extractSum("+").reduce((acc, cv) => acc + cv);
     return [string, add];
   }
 
   if (string.includes("-")) {
-    let minus = string
-      .split("-")
-      .map(Number)
-      .reduce((acc, cv) => acc - cv);
+    let minus = extractSum("-").reduce((acc, cv) => acc - cv);
     return [string, minus];
   }
 
   if (string.includes("*")) {
-    let multiply = string
-      .split("*")
-      .map(Number)
-      .reduce((acc, cv) => acc * cv);
+    let multiply = extractSum("*").reduce((acc, cv) => acc * cv);
     return [string, multiply];
   }
 
   if (string.includes("/")) {
-    let divide = string
-      .split("/")
-      .map(Number)
-      .reduce((acc, cv) => acc / cv);
+    let divide = extractSum("/").reduce((acc, cv) => acc / cv);
     return [string, divide];
   }
 
